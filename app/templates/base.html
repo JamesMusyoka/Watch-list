@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-    {% extends 'bootstrap/base.html'%}
     <head>
         <meta charset="utf-8">
         {% if title %}
@@ -12,8 +11,11 @@
     <body>
         <!-- Content block -->
 
-        {% block content %}
-        {% include 'navbar.html' %}
-        {% endblock%}
+        {% extends 'bootstrap/base.html'%}
+
+        <!-- Navbar block  --> 
+        {% block navbar %}
+            {% include 'navbar.html' %}
+        {% endblock %}
     </body>
 </html>
